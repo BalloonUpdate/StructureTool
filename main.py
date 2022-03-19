@@ -22,7 +22,7 @@ if __name__ == "__main__":
     # 解析参数
     parser = argparse.ArgumentParser(description='file comparer')
     parser.add_argument('source-dir', type=str, help='specify source directory to calculate structure data from')
-    parser.add_argument('outout-dir', type=str, help='specify output file to save structure data')
+    parser.add_argument('outout-file', type=str, help='specify output file to save structure data')
     args = vars(parser.parse_args())
 
     arg_source_dir = args['source-dir']
