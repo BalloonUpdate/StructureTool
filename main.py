@@ -8,7 +8,7 @@ def generate_structure(dir: File):
     structure = []
     for f in dir:
         if f.isFile:
-            structure.append({ 'name': f.name, 'length': f.length, 'hash': f.sha1 })
+            structure.append({ 'name': f.name, 'length': f.length, 'hash': f.sha1, 'modified': f.modified })
         if f.isDirectory:
             structure.append({ 'name': f.name, 'children': generate_structure(f) })
     return structure

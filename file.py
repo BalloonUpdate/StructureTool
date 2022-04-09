@@ -91,6 +91,10 @@ class File:
     @property
     def parent(self):
         return File(os.path.dirname(self.path))
+    
+    @property
+    def modified(self):
+        return int(os.path.getmtime(self.path))
 
     def delete(self):
         if self.exists:
